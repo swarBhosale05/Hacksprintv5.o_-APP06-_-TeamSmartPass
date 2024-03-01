@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         binding.alertsRecyclerView.adapter = adapter
         binding.alertsRecyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Simulate offline alerts
         val offlineAlerts = listOf("Earthquake alert", "Flood warning", "Tornado watch")
         adapter.submitList(offlineAlerts)
 
