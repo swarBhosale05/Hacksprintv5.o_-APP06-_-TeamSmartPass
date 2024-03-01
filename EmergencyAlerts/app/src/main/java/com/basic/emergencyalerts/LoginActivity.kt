@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                     showSnackbar("Login successful")
                     startActivity(Intent(this, MainActivity::class.java))
                 } else {
-                    showSnackbar("Invalid phone number or password")
+                    showSnackbar("Invalid phone number or password.")
                 }
             } else {
                 showSnackbar("Please enter phone number and password")
