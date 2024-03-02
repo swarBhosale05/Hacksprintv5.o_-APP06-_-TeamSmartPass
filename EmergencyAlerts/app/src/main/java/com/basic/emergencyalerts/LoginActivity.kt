@@ -24,6 +24,9 @@ class LoginActivity : AppCompatActivity() {
         binding.registerTextView.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
         }
+        binding.loginTextView.setOnClickListener {
+            startActivity(Intent(this,LoginAdminActivity::class.java))
+        }
         binding.loginButton.setOnClickListener {
             val phoneNumber = binding.editTextPhoneNumber.text.toString().trim()
             val password = binding.editTextPassword.text.toString().trim()
@@ -44,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
                     val userData = snapshot.getValue(Users::class.java)
                     if (userData?.password == password) {
                         showSnackbar("Login successful")
-                        startActivity(Intent(applicationContext, MainActivity::class.java))
+                        startActivity(Intent(applicationContext, AlertActivity::class.java))
                     } else {
                         showSnackbar("Incorrect password")
                     }

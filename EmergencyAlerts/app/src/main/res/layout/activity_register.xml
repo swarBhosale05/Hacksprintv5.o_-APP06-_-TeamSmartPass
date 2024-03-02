@@ -64,47 +64,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
 
-    <com.skydoves.powerspinner.PowerSpinnerView
-        android:id="@+id/region_spinnerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_design"
-        android:hint="Select Region"
-        android:layout_marginTop="15dp"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-        app:spinner_arrow_gravity="end"
-        app:spinner_arrow_padding="8dp"
-        app:spinner_divider_show="true"
-        app:spinner_divider_size="0.4dp"
-        app:spinner_popup_animation="normal"
-        app:spinner_popup_background="@drawable/edittext_design"
-        app:spinner_popup_elevation="14dp" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/register_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:background="@drawable/edittext_design"
         android:text="Sign Up"
         android:textAllCaps="false"
+        android:layout_marginTop="15dp"
         app:backgroundTint="@color/main_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/region_spinnerView" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
     <TextView
         android:id="@+id/login_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login???"
+        android:text="Login"
         android:layout_marginTop="15dp"
         android:textColor="@color/main_color"
         android:textSize="18sp"

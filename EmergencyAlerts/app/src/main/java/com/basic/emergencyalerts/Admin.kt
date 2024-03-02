@@ -1,7 +1,7 @@
 package com.basic.emergencyalerts
 
-data class Users(
+data class Admin(
     val name: String? = null,
     val phoneNumber: String? = null,
     val password: String? = null,
-    )
+)

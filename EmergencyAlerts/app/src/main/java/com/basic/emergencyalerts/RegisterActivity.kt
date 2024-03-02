@@ -32,7 +32,6 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.regionSpinnerView.setItems(regions)
 
         binding.loginTextView.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -41,27 +40,20 @@ class RegisterActivity : AppCompatActivity() {
             val name = binding.editTextName.text.toString().trim()
             val phoneNumber = binding.editTextPhoneNumber.text.toString().trim()
             val password = binding.editTextPassword.text.toString().trim()
-            val selectedRegionIndex = binding.regionSpinnerView.selectedIndex
 
-            val region = if (selectedRegionIndex != -1) {
-                regions[selectedRegionIndex]
-            } else {
-                ""
-            }
             if (name.isEmpty() || phoneNumber.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else
-                registerUser(name, phoneNumber, password, region)
+                registerUser(name, phoneNumber, password)
         }
     }
 
-    private fun registerUser(name: String, phoneNumber: String, password: String, region: String) {
+    private fun registerUser(name: String, phoneNumber: String, password: String) {
         val userData = hashMapOf(
             "name" to name,
             "phoneNumber" to phoneNumber,
             "password" to password,
-            "region" to region
         )
 
         database.child("users").child(phoneNumber).setValue(userData)

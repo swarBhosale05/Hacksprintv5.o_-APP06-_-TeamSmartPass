@@ -16,28 +16,14 @@
         android:hint="Enter Alert Message"
         />
 
-    <com.skydoves.powerspinner.PowerSpinnerView
-        android:id="@+id/region_spinnerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/edittext_design"
-        android:hint="Select Region"
-        android:clickable="true"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_AlertMessage"
-        app:spinner_arrow_gravity="end"
-        app:spinner_arrow_padding="8dp"
-        app:spinner_divider_show="true"
-        app:spinner_divider_size="0.4dp"
-        app:spinner_popup_animation="normal"
-        app:spinner_popup_background="@drawable/edittext_design"
-        app:spinner_popup_elevation="14dp" />
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+       android:background="@drawable/edittext_design"
+       android:hint="Enter Region"
+       android:id="@+id/region_edittext"
+       />
     <Button
         android:id="@+id/alertButton"
         android:layout_marginTop="10dp"
