@@ -32,7 +32,6 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set up PowerSpinner with regions
         binding.regionSpinnerView.setItems(regions)
 
         binding.loginTextView.setOnClickListener {

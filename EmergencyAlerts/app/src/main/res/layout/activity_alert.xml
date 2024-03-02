@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".AlertActivity">
 
+    <EditText
+        android:id="@+id/editText_AlertMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_design"
+        android:hint="Enter Alert Message"
+        />
+
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/region_spinnerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_design"
+        android:hint="Select Region"
+        android:clickable="true"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_AlertMessage"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_popup_animation="normal"
+        app:spinner_popup_background="@drawable/edittext_design"
+        app:spinner_popup_elevation="14dp" />
     <Button
         android:id="@+id/alertButton"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Send Alert"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/edittext_design"
+        app:backgroundTint="@color/main_color"
         android:layout_centerInParent="true"/>
 
-</RelativeLayout>
+</LinearLayout>

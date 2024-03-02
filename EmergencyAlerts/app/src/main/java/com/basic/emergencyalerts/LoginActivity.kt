@@ -32,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
             loginUser(phoneNumber, password)
         }
     }
@@ -45,19 +44,16 @@ class LoginActivity : AppCompatActivity() {
                     val userData = snapshot.getValue(Users::class.java)
                     if (userData?.password == password) {
                         showSnackbar("Login successful")
-                        startActivity(Intent(applicationContext, AlertActivity::class.java))
+                        startActivity(Intent(applicationContext, MainActivity::class.java))
                     } else {
-                        // Incorrect password
                         showSnackbar("Incorrect password")
                     }
                 } else {
-                    // User not found
                     showSnackbar("User not found")
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Error occurred
                 showSnackbar("Login failed")
             }
         })

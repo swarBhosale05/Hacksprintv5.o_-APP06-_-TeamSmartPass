@@ -1,34 +1,55 @@
 <!-- activity_main.xml -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Emergency Alerts"
-        android:textSize="24sp"
-        android:layout_centerInParent="true" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/alertsRecyclerView"
+    <EditText
+        android:id="@+id/editText_AlertMessage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/titleTextView"
-        android:padding="16dp"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/noDataTextView"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No alerts available"
-        android:textSize="18sp"
-        android:layout_below="@id/titleTextView"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone" />
+        android:background="@drawable/edittext_design"
+        android:hint="Write Alert Message here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <com.skydoves.powerspinner.PowerSpinnerView
+        android:id="@+id/region_spinnerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_design"
+        android:hint="Select Region"
+        android:clickable="true"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_AlertMessage"
+        app:spinner_arrow_gravity="end"
+        app:spinner_arrow_padding="8dp"
+        app:spinner_divider_show="true"
+        app:spinner_divider_size="0.4dp"
+        app:spinner_popup_animation="normal"
+        app:spinner_popup_background="@drawable/edittext_design"
+        app:spinner_popup_elevation="14dp" />
+
+    <Button
+        android:id="@+id/button_sendAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext_design"
+        android:text="Send Alert"
+        app:backgroundTint="@color/main_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_spinnerView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
