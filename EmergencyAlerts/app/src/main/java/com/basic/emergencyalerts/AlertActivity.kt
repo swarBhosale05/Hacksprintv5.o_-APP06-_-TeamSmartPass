@@ -1,6 +1,7 @@
 package com.basic.emergencyalerts
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.telephony.SmsManager
@@ -23,6 +24,9 @@ class AlertActivity : AppCompatActivity() {
 
         val alertButton: Button = findViewById(R.id.alertButton)
 
+        binding.textviewEmergency.setOnClickListener {
+            startActivity(Intent(applicationContext,EmergencyContactsActivity::class.java))
+        }
         alertButton.setOnClickListener {
             if (checkPermission()) {
                 sendAlertSMS()

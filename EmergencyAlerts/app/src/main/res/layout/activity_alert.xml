@@ -50,4 +50,12 @@
         app:backgroundTint="@color/main_color"
         android:layout_centerInParent="true"/>
 
+    <TextView
+        android:id="@+id/textview_emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/main_color"
+        android:textSize="20dp"
+        android:text="Emergency Contacts"/>
 </LinearLayout>
